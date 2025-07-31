@@ -174,11 +174,11 @@ function printAllSavedCards() {
   }).from(printable).save();
 }
 // الرجوع للواجهة الرئيسية
-/*function goBack() {
-  window.location.href = "index.html";
-}*/
 function goBack() {
+  window.location.href = "./index.html";
+}
+/*function goBack() {
   // هذا سيعمل سواء تم فتح الصفحة من folder أو من سيرفر
   const basePath = window.location.href.replace(/\/[^\/]*$/, "/");
   window.location.href = basePath + "index.html";
-}
+}*/
