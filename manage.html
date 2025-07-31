@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>أدوات الكروت - SkyNet</title>
+  <link rel="stylesheet" href="tools/tools.css">
+</head>
+<body>
+  <h2>📋 الكروت المحفوظة في LocalStorage</h2>
+
+  <div id="mikrotik-settings" style="margin-bottom: 20px;">
+    <h3>🔧 إعدادات الاتصال بالميكروتك</h3>
+    <input type="text" id="mt-ip" placeholder="IP الميكروتك" value="172.16.0.1">
+    <input type="number" id="mt-port" placeholder="Port" value="8728">
+    <input type="text" id="mt-user" placeholder="Username" value="admin">
+    <input type="password" id="mt-pass" placeholder="Password" value="kaSsem">
+    <input type="text" id="mt-profile" placeholder="Profile" value="default">
+    <button onclick="saveMikrotikSettings()">💾 حفظ الإعدادات</button>
+  </div>
+
+  <div id="savedCardsContainer">
+    <table id="savedCardsTable">
+      <thead>
+        <tr>
+          <th>اسم المستخدم</th>
+          <th>البروفايل</th>
+          <th>إرسال</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  
+<button onclick="printAllSavedCards()" style="margin-top: 20px; background-color: #007bff; color: white; padding: 10px 20px; font-size: 16px; border: none; border-radius: 8px;">
+🖨️ طباعة كل الصفحات
+</button>
+  <button onclick="goBack()">🔙 رجوع للواجهة الأساسية</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  
+  <script src="tools/tools.js"></script>
+</body>
+</html>

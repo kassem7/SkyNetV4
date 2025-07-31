@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لا يوجد اتصال</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f8f8f8;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 2em;
+      color: #007BFF;
+    }
+    p {
+      color: #555;
+    }
+  
+  @keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+  70% { transform: scale(1.08); box-shadow: 0 0 20px rgba(0,0,0,0.4); }
+  100% { transform: scale(1); box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+}
+      @keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+      img {
+        width: 80px;
+        height: auto;
+        border-radius: 50px;
+        margin-bottom: 15px;
+        animation: pulse 1.2s infinite,
+        fadeIn 1.2s ease-out;
+        box-shadow: 0 0 10px
+        rgba(0,0,0,0.2);
+        transition: transform 0.3s
+        ease, box-shadow 0.3s ease;}
+      img:hover {
+        transform: scale(1.12);
+        box-shadow: 0 0 25px;
+        rgba(0,0,0,0.5);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🚫 لا يوجد اتصال بالإنترنت</h1>
+  <p>يرجى التحقق من الشبكة والمحاولة مرة أخرى.</p>
+  <img src="img/logo.png" alt="شعار سكاي نت" />
+</body>
+</html>

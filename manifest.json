@@ -1,0 +1,16 @@
+{
+  "name": "مولد كروت سكاي نت",
+  "short_name": "سكاي نت",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007BFF",
+  "icons": [
+    {
+      "src": "img/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "lang": "ar"
+}
