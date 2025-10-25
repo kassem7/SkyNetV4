@@ -12,6 +12,7 @@
 
 <body>
   <!-- ✅ شاشة تسجيل الدخول باستخدام Firebase -->
+  <!--
   <div id="login-container">
     <div id="login-box">
       <img src="img/logo.png" alt="شعار سكاي نت" class="logoin">
@@ -22,7 +23,7 @@
       <p id="login-error" style="color:red; display:none;"></p>
     </div>
   </div>
-
+-->
   <!-- ✅ واجهة التطبيق بعد تسجيل الدخول -->
   <div id="mainApp" style="display: none;">
     <div class="header-box">
@@ -35,21 +36,21 @@
        <div style="display: flex; gap: 20px;">
       <div class="form-group"><label>السعر والحجم:</label>
       <select id="info">
-        <option value="٥٠٠ ريال -- الحجم: ١ جيجا" > باقه ابو ٥٠٠ ريال </option>
-        <option value="١٠٠٠ ريال -- الحجم: ٢ جيجا"> باقة ابو ١٠٠٠ريال </option>
-        <option value="١٦٠٠ ريال -- الحجم: ٣ جيجا"> باقة ابو ١٦٠٠ ريال</option>
-        <option value="٢٠٠٠ ريال -- الحجم: ٥ جيجا"> باقة ابو ٢٠٠٠ريال</option>
-        <option value="٣٠٠٠ ريال -- الحجم: ٩ جيجا" selected> باقة ابو ٣٠٠٠ ريال</option>
+        <option value="٥٠٠ ريال -- الحجم: ١.٥ جيجا" > باقه ابو ٥٠٠ ريال </option>
+        <option value="١٠٠٠ ريال -- الحجم: ٣ جيجا"> باقة ابو ١٠٠٠ريال </option>
+        <option value="١٥٠٠ ريال -- الحجم: ٥ جيجا"> باقة ابو ١٥٠٠ ريال</option>
+        <option value="٢٠٠٠ ريال -- الحجم: ٧ جيجا"> باقة ابو ٢٠٠٠ريال</option>
+        <option value="٣٠٠٠ ريال -- الحجم: ١١ جيجا" selected> باقة ابو ٣٠٠٠ ريال</option>
       </select>
     </div>
     <div class="form-group">
       <label for="bg-select">الخلفية:</label>
       <select id="bg-select">
-<option value="card1.png">خلفية ١</option>
+<option value="card1.png">خلفية ٢٠٠٠</option>
 <option value="card2.png" selected>خلفية ٣٠٠٠</option>
 <option value="card9.png">خلفية ١٠٠٠</option>
 <option value="card16.png">خلفية ٥٠٠</option>
-<option value="card3.png">خلفية ٣</option>
+<option value="card3.png">خلفية ١٥٠٠</option>
 <option value="card4.png">خلفية ٤</option>
 <option value="card5.png">خلفية ٥</option>
 <option value="card6.png">خلفية ٦</option>
@@ -69,15 +70,15 @@
    <div style="display: flex; gap: 20px;">
     <div class="form-group"><label>الحجم والزمن:</label>
       <select id="limit">
-        <option value="limit-bytes-total=1074M limit-uptime=7d">١ جيجا / ٧ يوم</option>
-        <option value="limit-bytes-total=2148M limit-uptime=15d">٢ جيجا / ١٥ يوم</option>
-        <option value="limit-bytes-total=3072M limit-uptime=20d">٣ جيجا / ٢٠ يوم</option>
-        <option value="limit-bytes-total=5000M limit-uptime=25d">٥ جيجا / ٢٥ يوم</option>
-        <option value="limit-bytes-total=9659M limit-uptime=30d" selected>٩ جيجا / ٣٠ يوم</option>
+        <option value="limit-bytes-total=1611M limit-uptime=7d">١.٥ جيجا / ١٠ يوم</option>
+        <option value="limit-bytes-total=3222M limit-uptime=15d">٣ جيجا / ١٥ يوم</option>
+        <option value="limit-bytes-total=5370M limit-uptime=20d">٥ جيجا / ٢٠ يوم</option>
+        <option value="limit-bytes-total=7518M limit-uptime=25d">٧ جيجا / ٢٥ يوم</option>
+        <option value="limit-bytes-total=11814M limit-uptime=30d" selected>١١ جيجا / ٣٠ يوم</option>
       </select>
     </div>
     <div class="form-group"><label>المدة:</label>
-      <select id="duration"><option>٧ يوم</option><option>١٥ يوم</option><option>٢٠ يوم</option><option>٢٥ يوم</option><option selected>٣٠ يوم</option></select>
+      <select id="duration"><option>١٠ يوم</option><option>١٥ يوم</option><option>٢٠ يوم</option><option>٢٥ يوم</option><option selected>٣٠ يوم</option></select>
     </div></div>
       
       <div style="display: flex; gap: 10px;">
@@ -133,12 +134,19 @@
 
   <!-- ✅ Firebase SDKs -->
   <!-- Firebase SDKs -->
+  <!--
 <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore-compat.js"></script>
+-->
+  <script>
+    /* =====================================================
+       تم تعليق تحميل مكتبات Firebase أعلاه.
+       أسفل تهيئة firebase أيضاً معلق لعدم تنفيذها.
+       يمكنك إلغاء التعليق لاحقًا لو أردت تفعيل Firebase.
+       ===================================================== */
 
-<script>
-  const firebaseConfig = {
+ /* const firebaseConfig = {
     apiKey: "AIzaSyC8iJQzh2J2b0Rd32Q5cjfBUNOD2okka2c",
     authDomain: "skynetprinterv2.firebaseapp.com",
     projectId: "skynetprinterv2",
@@ -151,8 +159,42 @@
   // تهيئة Firebase
   firebase.initializeApp(firebaseConfig);
   const auth = firebase.auth();
-  const db = firebase.firestore();
-</script>
+  const db = firebase.firestore();*/
+    // --- سكربت لتجاوز شاشة الدخول وعرض التطبيق مباشرة ---
+    document.addEventListener('DOMContentLoaded', function () {
+      var loginContainer = document.getElementById('login-container');
+      var mainApp = document.getElementById('mainApp');
+
+      // إخفاء شاشة الدخول وعرض التطبيق
+      if (loginContainer) loginContainer.style.display = 'none';
+      if (mainApp) mainApp.style.display = 'block';
+
+      // إخفاء رسالة خطأ إن ظهرت
+      var loginError = document.getElementById('login-error');
+      if (loginError) loginError.style.display = 'none';
+    });
+
+    // نحتفظ باسم الدالة firebaseLogin كي لا تكسر استدعاءات الزر
+    function firebaseLogin() {
+      // بدلاً من استخدام Firebase نعرض الواجهة مباشرة
+      var loginContainer = document.getElementById('login-container');
+      var mainApp = document.getElementById('mainApp');
+      if (loginContainer) loginContainer.style.display = 'none';
+      if (mainApp) mainApp.style.display = 'block';
+    }
+
+    // دالة تسجيل الخروج: نتركها بسيطة لتفادي أخطاء عند استدعائها
+    function logout() {
+      // إذا أردت إعادة عرض شاشة الدخول بدلاً من إعادة تحميل:
+      // document.getElementById('login-container').style.display = 'block';
+      // document.getElementById('mainApp').style.display = 'none';
+
+      // أو فعلًا إعادة تحميل الصفحة:
+      // location.reload();
+
+      // حالياً نتركها فارغة لتفادي أية أخطاء لأننا لا نستخدم Firebase.
+    }
+  </script>
 
   <!-- ✅ مكتبات خارجية  اكسل و pdf-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
