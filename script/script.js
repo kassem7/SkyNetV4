@@ -1,5 +1,5 @@
 
-function firebaseLogin() {
+/*function firebaseLogin() {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value;
 
@@ -19,7 +19,7 @@ function logout() {
   firebase.auth().signOut().then(() => {
     location.reload();
   });
-}
+}*/
 
 function showMiniToast() {
   const toast = document.getElementById("mini-toast");
@@ -31,7 +31,7 @@ function generateCards() {
   const container = document.getElementById("card-container");
   container.innerHTML = "";
 
-  const network = "سكاي نت";
+  const network = document.getElementById("network-name").value;
   const duration = document.getElementById("duration").value;
   const info = document.getElementById("info").value;
   const background = document.getElementById("bg-select").value;
@@ -134,7 +134,7 @@ function copyScriptToClipboard() {
 
 function downloadPDF() {
   const element = document.getElementById("card-container");
-  const comment = document.getElementById("comment").value.trim() || "skynet_cards";
+  const comment = document.getElementById("comment").value.trim() || "kingnet_cards";
   const now = new Date();
   const dateString = now.toISOString().slice(0, 10);
   const fileName = `${comment}_${dateString}.pdf`;
@@ -225,11 +225,11 @@ document.addEventListener("DOMContentLoaded", () => {
     infoSelect.addEventListener("change", function () {
       const value = this.value;
       const map = {
-        "٣٠٠٠": { bg: "card2.png", duration: "٣٠ يوم", comment: "3000", limit: "limit-bytes-total=9659M limit-uptime=30d" },
-        "٥٠٠": { bg: "card16.png", duration: "٧ يوم", comment: "500", limit: "limit-bytes-total=1074M limit-uptime=7d" },
-        "١٠٠٠": { bg: "card9.png", duration: "١٥ يوم", comment: "1000", limit: "limit-bytes-total=2148M limit-uptime=15d" },
-        "١٦٠٠": { bg: "card3.png", duration: "٢٠ يوم", comment: "1600", limit: "limit-bytes-total=3072M limit-uptime=20d" },
-        "٢٠٠٠": { bg: "card1.png", duration: "٢٥ يوم", comment: "2000", limit: "limit-bytes-total=5000M limit-uptime=25d" }
+        "٣٠٠٠": { bg: "card2.png", duration: "٣٠ يوم", comment: "3000", limit: "limit-bytes-total=11814M limit-uptime=30d" },
+        "٥٠٠": { bg: "card16.png", duration: "١٠ يوم", comment: "500", limit: "limit-bytes-total=1611M limit-uptime=7d" },
+        "١٠٠٠": { bg: "card9.png", duration: "١٥ يوم", comment: "1000", limit: "limit-bytes-total=3222M limit-uptime=15d" },
+        "١٥٠٠": { bg: "card3.png", duration: "٢٠ يوم", comment: "1500", limit: "limit-bytes-total=5370M limit-uptime=20d" },
+        "٢٠٠٠": { bg: "card1.png", duration: "٢٥ يوم", comment: "2000", limit: "limit-bytes-total=7518M limit-uptime=25d" }
       };
 
       for (const key in map) {
