@@ -1,4 +1,3 @@
-
 /*function firebaseLogin() {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value;
@@ -210,6 +209,7 @@ function exportToExcel() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  /*
   firebase.auth().onAuthStateChanged(user => {
     if (user) {
       document.getElementById("login-container").style.display = "none";
@@ -219,28 +219,37 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("login-container").style.display = "flex";
     }
   });
+  */
 
   const infoSelect = document.getElementById("info");
   if (infoSelect) {
     infoSelect.addEventListener("change", function () {
-      const value = this.value;
-      const map = {
+      const value = this.value; // القيمة المختارة، مثل: "١٥٠٠ ريال -- الحجم: ٥ جيجا"
+      
+      // نستخدم خريطة جديدة بمفاتيح أدق (الرقم فقط)
+            const map = {
         "٣٠٠٠": { bg: "card2.png", duration: "٣٠ يوم", comment: "3000", limit: "limit-bytes-total=11814M limit-uptime=30d" },
-        "٥٠٠": { bg: "card16.png", duration: "١٠ يوم", comment: "500", limit: "limit-bytes-total=1611M limit-uptime=7d" },
+        "٢٠٠٠": { bg: "card1.png", duration: "٢٥ يوم", comment: "2000", limit: "limit-bytes-total=7518M limit-uptime=25d" },
+        // 🚨 الآن 1500 قبل 1000
+        "١٥٠٠": { bg: "card3.png", duration: "٢٠ يوم", comment: "1500", limit: "limit-bytes-total=5370M limit-uptime=20d" }, 
         "١٠٠٠": { bg: "card9.png", duration: "١٥ يوم", comment: "1000", limit: "limit-bytes-total=3222M limit-uptime=15d" },
-        "١٥٠٠": { bg: "card3.png", duration: "٢٠ يوم", comment: "1500", limit: "limit-bytes-total=5370M limit-uptime=20d" },
-        "٢٠٠٠": { bg: "card1.png", duration: "٢٥ يوم", comment: "2000", limit: "limit-bytes-total=7518M limit-uptime=25d" }
+        "٥٠٠": { bg: "card16.png", duration: "١٠ يوم", comment: "500", limit: "limit-bytes-total=1611M limit-uptime=7d" }
       };
+      // ... باقي الكود
 
       for (const key in map) {
+        // نستخدم `startsWith` للبحث عن الرقم في بداية القيمة، وهي طريقة أدق من `includes`
+        // أو يمكنك ببساطة استخدام `value.includes(key)` ولكن تأكد من أنك تبحث عن "١٥٠٠" وليس "٥٠٠"
         if (value.includes(key)) {
           const m = map[key];
           document.getElementById("bg-select").value = m.bg;
           document.getElementById("duration").value = m.duration;
           document.getElementById("comment").value = m.comment;
           document.getElementById("limit").value = m.limit;
+          break;
         }
       }
     });
   }
+
 });
