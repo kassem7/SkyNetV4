@@ -31,85 +31,84 @@
       <img src="img/logo.png" alt="شعار سكاي نت" class="logo-img">
     </div>
 
-    <div class="controls">
-      <!-- أزرار التحكم -->
-       <div style="display: flex; gap: 20px;">
-      <div class="form-group"><label>السعر والحجم:</label>
-      <select id="info">
-        <option value="٥٠٠ ريال -- الحجم: ١.٥ جيجا" > باقه ابو ٥٠٠ ريال </option>
-        <option value="١٠٠٠ ريال -- الحجم: ٣ جيجا"> باقة ابو ١٠٠٠ريال </option>
-        <option value="١٥٠٠ ريال -- الحجم: ٥ جيجا"> باقة ابو ١٥٠٠ ريال</option>
-        <option value="٢٠٠٠ ريال -- الحجم: ٧ جيجا"> باقة ابو ٢٠٠٠ريال</option>
-        <option value="٣٠٠٠ ريال -- الحجم: ١١ جيجا" selected> باقة ابو ٣٠٠٠ ريال</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="bg-select">الخلفية:</label>
-      <select id="bg-select">
-<option value="card1.png">خلفية ٢٠٠٠</option>
-<option value="card2.png" selected>خلفية ٣٠٠٠</option>
-<option value="card9.png">خلفية ١٠٠٠</option>
-<option value="card16.png">خلفية ٥٠٠</option>
-<option value="card3.png">خلفية ١٥٠٠</option>
-<option value="card4.png">خلفية ٤</option>
-<option value="card5.png">خلفية ٥</option>
-<option value="card6.png">خلفية ٦</option>
-<option value="card7.png">خلفية ٧</option>
-<option value="card8.png">خلفية ٨</option>
-<option value="card10.png">خلفية ١٠</option>
-<option value="card11.png">خلفية ١١</option>
-<option value="card12.png">خلفية ١٢</option>
-<option value="card13.png">خلفية ١٣</option>
-<option value="card14.png">خلفية ١٤</option>
-<option value="card15.png">خلفية ١٥</option>
-<option value="card20.png">خلفية ٢٠</option>
-<option value="card21.png">خلفية ٢١</option>
-<option value="card22.png">خلفية ٢٢</option>
-      </select>
-    </div></div>
-   <div style="display: flex; gap: 20px;">
-    <div class="form-group"><label>الحجم والزمن:</label>
-      <select id="limit">
-        <option value="limit-bytes-total=1611M limit-uptime=7d">١.٥ جيجا / ١٠ يوم</option>
-        <option value="limit-bytes-total=3222M limit-uptime=15d">٣ جيجا / ١٥ يوم</option>
-        <option value="limit-bytes-total=5370M limit-uptime=20d">٥ جيجا / ٢٠ يوم</option>
-        <option value="limit-bytes-total=7518M limit-uptime=25d">٧ جيجا / ٢٥ يوم</option>
-        <option value="limit-bytes-total=11814M limit-uptime=30d" selected>١١ جيجا / ٣٠ يوم</option>
-      </select>
-    </div>
-    <div class="form-group"><label>المدة:</label>
-      <select id="duration"><option>١٠ يوم</option><option>١٥ يوم</option><option>٢٠ يوم</option><option>٢٥ يوم</option><option selected>٣٠ يوم</option></select>
-    </div></div>
-      
-      <div style="display: flex; gap: 10px;">
-    <div class="form-group"><label>اسم الشبكة:</label><input type="text" id="network-name" value="سكاي نت"></div>
-    <div class="form-group"><label>بادئة الكود:</label><input type="text" id="prefix" value="w" maxlength="2"></div></div>
-      <div style="display: flex; gap: 10px;">
-    <div class="form-group"><label>عدد الصفحات:</label><input type="number" id="pages" value="1" min="1"></div>
-    <div class="form-group"><label>التعليق:</label>
-      <input type="text" id="comment" placeholder="أدخل التعليق يدويًا">
-      <!--select id="comment"><option>500</option><option>1000</option><option>1600</option><option>2000</option><option selected>3000</option></select!--></div></div>
-      <div style="display: flex; gap: 10px;">
-    <div class="form-group"><label>الملف الشخصي:</label><input type="text" id="profile" value="default"></div>
-    <div class="form-group"><label>اسم السيرفر:</label>
-      <input type="text" id="server"
-        value="sky.net"
-      >
-      <!--select id="server"><option selected>sky.net</option><option>home.net</option><option>fiber.local</option></select!-->
-    </div></div>
-      <div class="button-row">
-      <button onclick="generateCards()">🌀 توليد كروت جديدة</button>
-      <button onclick="downloadPDF()">📄 تحميل PDF</button></div>
-      <div class="button-row">
-      <button onclick="copyScriptToClipboard()">📋 نسخ السكربت</button>
-      <button onclick="downloadText()">💾 حفظ السكربت في ملف</button></div>
-      <div class="button-row">
-      <button onclick="exportToExcel()">📊 تصدير إلى Excel</button>
-      <button onclick="loadSavedCards()">📂 عرض الكروت المحفوظة</button></div>
-      <div class="button-row">
-      <button onclick="resetGeneratedCards()">🔁 إعادة تعيين البيانات</button>
-      <button onclick="logout()">🚪 تسجيل الخروج</button></div>
-    </div>
+   <div class="controls">
+  <div style="display: flex; gap: 20px;">
+  <div class="form-group"><label>السعر والحجم:</label>
+  <select id="info">
+    <option value="٥٠٠ ريال -- الحجم: ١.٥ جيجا" > باقه ابو ٥٠٠ ريال </option>
+    <option value="١٠٠٠ ريال -- الحجم: ٣ جيجا"> باقة ابو ١٠٠٠ريال </option>
+    <option value="١٥٠٠ ريال -- الحجم: ٥ جيجا"> باقة ابو ١٥٠٠ ريال</option>
+    <option value="٢٠٠٠ ريال -- الحجم: ٧ جيجا"> باقة ابو ٢٠٠٠ريال</option>
+    <option value="٣٠٠٠ ريال -- الحجم: ١١ جيجا" selected> باقة ابو ٣٠٠٠ ريال</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="bg-select">الخلفية:</label>
+  <select id="bg-select">
+    <option value="card1.png">خلفية ٢٠٠٠</option>
+    <option value="card2.png" selected>خلفية ٣٠٠٠</option>
+    <option value="card9.png">خلفية ١٠٠٠</option>
+    <option value="card16.png">خلفية ٥٠٠</option>
+    <option value="card3.png">خلفية ١٥٠٠</option>
+    <option value="card4.png">خلفية ٤</option>
+    <option value="card5.png">خلفية ٥</option>
+    <option value="card6.png">خلفية ٦</option>
+    <option value="card7.png">خلفية ٧</option>
+    <option value="card8.png">خلفية ٨</option>
+    <option value="card10.png">خلفية ١٠</option>
+    <option value="card11.png">خلفية ١١</option>
+    <option value="card12.png">خلفية ١٢</option>
+    <option value="card13.png">خلفية ١٣</option>
+    <option value="card14.png">خلفية ١٤</option>
+    <option value="card15.png">خلفية ١٥</option>
+    <option value="card20.png">خلفية ٢٠</option>
+    <option value="card21.png">خلفية ٢١</option>
+    <option value="card22.png">خلفية ٢٢</option>
+  </select>
+</div></div>
+<div style="display: flex; gap: 20px;">
+<div class="form-group"><label>الحجم والزمن:</label>
+  <select id="limit">
+    <option value="limit-bytes-total=1611M limit-uptime=7d">١.٥ جيجا / ١٠ يوم</option>
+    <option value="limit-bytes-total=3222M limit-uptime=15d">٣ جيجا / ١٥ يوم</option>
+    <option value="limit-bytes-total=5370M limit-uptime=20d">٥ جيجا / ٢٠ يوم</option>
+    <option value="limit-bytes-total=7518M limit-uptime=25d">٧ جيجا / ٢٥ يوم</option>
+    <option value="limit-bytes-total=11814M limit-uptime=30d" selected>١١ جيجا / ٣٠ يوم</option>
+  </select>
+</div>
+<div class="form-group"><label>المدة:</label>
+  <select id="duration"><option>١٠ يوم</option><option>١٥ يوم</option><option>٢٠ يوم</option><option>٢٥ يوم</option><option selected>٣٠ يوم</option></select>
+</div></div>
+  
+  <div style="display: flex; gap: 10px;">
+<div class="form-group"><label>اسم الشبكة:</label><input type="text" id="network-name" value="سكاي نت"></div>
+<div class="form-group"><label>بادئة الكود:</label><input type="text" id="prefix" value="w" maxlength="2"></div></div>
+  <div style="display: flex; gap: 10px;">
+<div class="form-group"><label>عدد الصفحات:</label><input type="number" id="pages" value="1" min="1"></div>
+<div class="form-group"><label>التعليق:</label>
+  <input type="text" id="comment" placeholder="أدخل التعليق يدويًا أو سيتم تحديثه" value="3000">
+</div></div>
+  <div style="display: flex; gap: 10px;">
+<div class="form-group"><label>الملف الشخصي:</label><input type="text" id="profile" value="default"></div>
+<div class="form-group"><label>اسم السيرفر:</label>
+  <input type="text" id="server"
+    value="sky.net"
+  >
+</div></div>
+  <div class="button-row">
+  <button onclick="generateCards()">🌀 توليد كروت جديدة</button>
+  <button onclick="downloadPDF()">📄 تحميل PDF</button></div>
+  <div class="button-row">
+  <button onclick="copyScriptToClipboard()">📋 نسخ السكربت</button>
+  <button onclick="downloadText()">💾 حفظ السكربت في ملف</button></div>
+  <div class="button-row">
+  <button onclick="exportToExcel()">📊 تصدير إلى Excel</button>
+  <button onclick="loadSavedCards()">📂 عرض الكروت المحفوظة</button></div>
+  <div class="button-row">
+  <button onclick="resetGeneratedCards()">🔁 إعادة تعيين البيانات</button>
+  <button onclick="logout()">🚪 تسجيل الخروج</button></div>
+</div>
+
     
 <button onclick="location.href='manage.html'">🧰 الأدوات المتقدمة</button>
     <div id="card-container"></div>
